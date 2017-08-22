@@ -1,0 +1,31 @@
+{
+  "name": "neateats",
+  "version": "1.0.0",
+  "description": "Neat Eats API Project",
+  "main": "app.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliematina/neateats.git"
+  },
+  "keywords": [
+    "Facebook",
+    "Google-Maps",
+    "API"
+  ],
+  "author": "Charlie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charliematina/neateats/issues"
+  },
+  "homepage": "https://github.com/charliematina/neateats#readme"
+}
