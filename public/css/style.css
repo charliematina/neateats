@@ -187,24 +187,28 @@ h1{
 	clear: both;
 }
 
-#closeButton{
+#closeButtonContainer{
 	margin-bottom: 50px;
 	cursor: pointer;
 	clear: both;
+}
+
+#closeButton{
+	max-width: 30px;
 }
 
 #placeAddress{
 	display: inline-block;
 	padding: 40px;
 	letter-spacing: 3px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 
 #placePhone{
 	display: inline-block;
 	padding: 40px;
 	letter-spacing: 3px;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 
 
