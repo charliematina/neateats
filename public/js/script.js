@@ -11,6 +11,8 @@ $(".listName").hover(function(){
 }).click(function(){
 	$(".listName").removeClass('clicked').css("color","white").find(".navHoverBlock").css("width","0%");
 	$(this).addClass('clicked').css("color","#db2940").find(".navHoverBlock").css("width","100%");
+	$("#studentNames").fadeOut();
+	$("#studentChoices").fadeIn();
 	openOverlay();
 })
 
