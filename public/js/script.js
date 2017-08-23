@@ -1,8 +1,23 @@
 // Global Variables
-var map;
+var map, popupbox;
 
-// Calling Functions
-initialiseMap();
+$.ajax({
+       url: "http://localhost:3000/students",
+       contentType: "application/json",
+       dataType: "json",
+       success: function(data){
+       	for (var i = 0; i < data.length; i++) {
+       		var studentName = data[i].name;
+
+       		$("#nameList").append("<li class='listName'><div class='navHoverBlock'></div>"+studentName+"</li>")
+       	}
+
+       	initialiseMap();
+       },
+       error: function(){
+            console.log("Error");
+       }
+});
 
 $(".listName").hover(function(){
 		if($(this).hasClass("clicked")){
@@ -236,9 +251,53 @@ function initialiseMap(){
 
 	// Creating a new instance of map, locating the users position, run the map anf then show all the attractions.
 	map = new google.maps.Map(document.getElementById("map"), defaultOptions);
+
+	// Calling Map functions
+	injectMarkers();
 	
 	// This event listener calls addMarker() once the map is clicked.
     // google.maps.event.addListener(map, 'click', function(event) {
     //   addMarker(event.latLng, map);
     // });
+}
+
+// Showing all markers using ajax and external json files
+function injectMarkers(){
+	$.ajax({
+		url: "test.json",
+		dataType: "json",
+		success: function(Data){
+			for (var i = 0; i < Data.length; i++) {
+				var marker = new google.maps.Marker({
+					position: {
+						lat: Data[i].lat,
+						lng: Data[i].lng
+					},
+					map: map,
+					animation:google.maps.Animation.DROP,
+					title:Data[i].name,
+					description:Data[i].name,
+				});
+
+				// Adding event listener to function, allowing the user to toggle the infobox in the Google Map
+				setMarkerInfo(marker);
+			}
+		},	
+		error: function(){
+			console.log("Error, server not responding");
+		}
+	});
+}
+
+// Setting information about marker
+function setMarkerInfo(marker){
+	if(popupbox){
+		popupbox.close();
+	}
+
+	google.maps.event.addListener(marker, "click", function(){
+		console.log(marker);
+	});
+
+	return;
 }

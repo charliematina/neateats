@@ -80,6 +80,7 @@ h1{
 	z-index: 3;
 	cursor: pointer;
 	transition-duration: 300ms;
+	text-transform: uppercase;
 }
 
 .listName:hover{
