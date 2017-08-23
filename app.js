@@ -1,10 +1,15 @@
 var express = require("express");
 var cors = require("cors");
-var config = require("./config");
+// var config = require("./config");
 var path = require("path");
+var students = require("./data");
 
 var app = express();
 
+
+app.get("/students", function (request, response){
+	response.json(students);
+});
 app.use(cors());
 app.use(express.static("./public"));
 

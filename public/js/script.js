@@ -4,6 +4,25 @@ var map;
 // Calling Functions
 initialiseMap();
 
+$.ajax({
+       url: "http://localhost:3000/students",
+       contentType: "application/json",
+       dataType: "json",
+       success: function(data){
+       	for (var i = 0; i < data.length; i++) {
+       		var studentName = data[i].name;
+
+       		$("#nameList").append("<li class='listName'><div class='navHoverBlock'></div>"+studentName+"</li>")
+       	}
+       },
+       error: function(){
+            console.log("Error");
+       }
+});
+
+
+
+
 $(".listName").hover(function(){
 		if($(this).hasClass("clicked")){
 		} else{
