@@ -1,0 +1,50 @@
+[
+	{ 	
+		"name" : "Rosalind",
+		"gender" : "male",
+		"choice1" : {
+			"id": 407702692702904,
+			"name": "Lorettas"
+		},
+		"choice2" : {
+			"id": 654826151280351,
+			"name": "Five Boroughs"
+		},
+		"choice3" : {
+			"id": 196714513687573,
+			"name": "Sweet Mothers Kitchen"
+		}
+	},
+	{ 	
+		"name" : "Amy",
+		"gender" : "female",
+		"choice1" : {
+			"id": "INSERT NUMBER ID",
+			"name": "Oriental Kingdom"
+		},
+		"choice2" : {
+			"id": 654826151280351,
+			"name": "Five Boroughs"
+		},
+		"choice3" : {
+			"id": 110476935651011,
+			"name": "Memphis Belle Coffee House"
+		}
+	},
+	{ 	
+		"name" : "Camille",
+		"gender" : "female",
+		"choice1" : {
+			"id": 196714513687573,
+			"name": "Sweet Mothers Kitchen"
+		},
+		"choice2" : {
+			"id": 417011825045675,
+			"name": "Dragons"
+		},
+		"choice3" : {
+			"id": 171328776240092,
+			"name": "Ortega"
+		}
+	}
+]
