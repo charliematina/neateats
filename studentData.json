@@ -4,15 +4,21 @@
 		"gender" : "male",
 		"choice1" : {
 			"id": 407702692702904,
-			"name": "Lorettas"
+			"name": "Lorettas",
+			"lat" : -41.29434,
+			"long" : 174.7752999
 		},
 		"choice2" : {
 			"id": 654826151280351,
-			"name": "Five Boroughs"
+			"name": "Five Boroughs",
+			"lat" : -41.294220413572,
+			"long" : 174.78515391541
 		},
 		"choice3" : {
 			"id": 196714513687573,
-			"name": "Sweet Mothers Kitchen"
+			"name": "Sweet Mothers Kitchen",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		}
 	},
 	{ 	
@@ -20,15 +26,21 @@
 		"gender" : "female",
 		"choice1" : {
 			"id": "INSERT NUMBER ID",
-			"name": "Oriental Kingdom"
+			"name": "Oriental Kingdom",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		},
 		"choice2" : {
 			"id": 654826151280351,
-			"name": "Five Boroughs"
+			"name": "Five Boroughs",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		},
 		"choice3" : {
 			"id": 110476935651011,
-			"name": "Memphis Belle Coffee House"
+			"name": "Memphis Belle Coffee House",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		}
 	},
 	{ 	
@@ -36,15 +48,21 @@
 		"gender" : "female",
 		"choice1" : {
 			"id": 196714513687573,
-			"name": "Sweet Mothers Kitchen"
+			"name": "Sweet Mothers Kitchen",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		},
 		"choice2" : {
 			"id": 417011825045675,
-			"name": "Dragons"
+			"name": "Dragons",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		},
 		"choice3" : {
 			"id": 171328776240092,
-			"name": "Ortega"
+			"name": "Ortega",
+			"lat" : -41.29426,
+			"long" : 174.78322
 		}
 	}
 ]
