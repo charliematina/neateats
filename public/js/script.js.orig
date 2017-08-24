@@ -1,6 +1,8 @@
 // Global Variables
+<<<<<<< HEAD
+<<<<<<< HEAD
 var map;
-var fbToken = "EAACEdEose0cBAJF74WArNnjVS5JSbEHJD6S4IfZAak5kWkuOFULWn9FQe1ljMszQpIzM9wS9Bt8o3dZA4apGqIj37PYWagA9PV0AVMZBYroPNZCJubZCvwpoX3cLOVveS5fKLLKJMMD8bKHU6jcVK8mCARylqLcz3kpRHqOBXwLoPosxv8aXsDfKZApU2PJxapQv9ilPtZAEAZDZD";
+var fbToken = "EAACEdEose0cBAIQyUuYsBgByFCZAEN0NZAUnE7ZAN1Qc8Nc75E3VdifqQIJZCAj3O2ogJw7e5vZB9IzvZC15Nzd2fNg168RXNOJ5wpAQJKEr27d652zjIBJXzF8W7kaeaofHl4omflPRUFPfwCOvU0JgRE0NuRe69K6DzzeLAeuRF5NhZA1QvTsEZBZCZAu1zlgKdcMnoacQVxlgZDZD";
 var pageId;
 var placeName;
 var placeAbout;
@@ -23,12 +25,15 @@ var choice2;
 var choice3;
 var gender;
 
-
 // Calling Functions
 initialiseMap();
 getStudentData();
-
+=======
 var map, popupbox;
+>>>>>>> a983f418e57cda9f4b5c64b7308c7ebe52f159b8
+=======
+var map, popupbox;
+>>>>>>> a983f418e57cda9f4b5c64b7308c7ebe52f159b8
 
 function getStudentData(){
 	$.ajax({
@@ -54,6 +59,8 @@ function getStudentData(){
        error: function(){
             console.log("Error");
        }
+<<<<<<< HEAD
+<<<<<<< HEAD
 	});
 }
 
@@ -101,10 +108,17 @@ $(document).on('mouseover', '.navName', function(){
 
 $(document).on('mouseover', '.studentChoice', function(){
 	if($(this).hasClass("clicked")){
+=======
+=======
+>>>>>>> a983f418e57cda9f4b5c64b7308c7ebe52f159b8
+});
 
-	} else{
-		$(this).find(".navHoverBlock").css("width","15px");
-	}
+$(".listName").hover(function(){
+		if($(this).hasClass("clicked")){
+>>>>>>> a983f418e57cda9f4b5c64b7308c7ebe52f159b8
+		} else{
+			$(this).find(".navHoverBlock").css("width","15px");
+		}
 }).on('mouseout', '.studentChoice', function(){
 	if($(this).hasClass("clicked")){
 		} else{
@@ -392,6 +406,7 @@ function initialiseMap(){
 	// Creating a new instance of map, locating the users position, run the map anf then show all the attractions.
 	map = new google.maps.Map(document.getElementById("map"), defaultOptions);
 
+	// Calling Map functions
 	injectMarkers();
 	
 	// This event listener calls addMarker() once the map is clicked.
