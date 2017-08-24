@@ -1,6 +1,6 @@
 // Global Variables
 var map;
-var fbToken = "EAACEdEose0cBAIQyUuYsBgByFCZAEN0NZAUnE7ZAN1Qc8Nc75E3VdifqQIJZCAj3O2ogJw7e5vZB9IzvZC15Nzd2fNg168RXNOJ5wpAQJKEr27d652zjIBJXzF8W7kaeaofHl4omflPRUFPfwCOvU0JgRE0NuRe69K6DzzeLAeuRF5NhZA1QvTsEZBZCZAu1zlgKdcMnoacQVxlgZDZD";
+var fbToken = "EAACEdEose0cBAJF74WArNnjVS5JSbEHJD6S4IfZAak5kWkuOFULWn9FQe1ljMszQpIzM9wS9Bt8o3dZA4apGqIj37PYWagA9PV0AVMZBYroPNZCJubZCvwpoX3cLOVveS5fKLLKJMMD8bKHU6jcVK8mCARylqLcz3kpRHqOBXwLoPosxv8aXsDfKZApU2PJxapQv9ilPtZAEAZDZD";
 var pageId;
 var placeName;
 var placeAbout;
@@ -22,6 +22,7 @@ var choice1;
 var choice2;
 var choice3;
 var gender;
+var map, popupbox;
 
 // Calling Functions
 initialiseMap();
@@ -385,9 +386,52 @@ function initialiseMap(){
 
 	// Creating a new instance of map, locating the users position, run the map anf then show all the attractions.
 	map = new google.maps.Map(document.getElementById("map"), defaultOptions);
+
+	injectMarkers();
 	
 	// This event listener calls addMarker() once the map is clicked.
     // google.maps.event.addListener(map, 'click', function(event) {
     //   addMarker(event.latLng, map);
     // });
+}
+
+// Showing all markers using ajax and external json files
+function injectMarkers(){
+	$.ajax({
+		url: "test.json",
+		dataType: "json",
+		success: function(Data){
+			for (var i = 0; i < Data.length; i++) {
+				var marker = new google.maps.Marker({
+					position: {
+						lat: Data[i].lat,
+						lng: Data[i].lng
+					},
+					map: map,
+					animation:google.maps.Animation.DROP,
+					title:Data[i].name,
+					description:Data[i].name,
+				});
+
+				// Adding event listener to function, allowing the user to toggle the infobox in the Google Map
+				setMarkerInfo(marker);
+			}
+		},	
+		error: function(){
+			console.log("Error, server not responding");
+		}
+	});
+}
+
+// Setting information about marker
+function setMarkerInfo(marker){
+	if(popupbox){
+		popupbox.close();
+	}
+
+	google.maps.event.addListener(marker, "click", function(){
+		console.log(marker);
+	});
+
+	return;
 }
