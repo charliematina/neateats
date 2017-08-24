@@ -8,6 +8,7 @@ body{
 	background-color: #e25164;
 	font-family: 'Raleway', sans-serif;
 	color: white;
+	z-index: -11;
 }
 
 nav{
@@ -18,9 +19,42 @@ nav{
 	/*position: relative;*/
 }
 
+hr{
+	z-index: 200;
+	width: 20%;
+	margin: 0 auto;
+	border: none;
+	height: 2px;
+	background-color: white;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
 #navContainer{
 	text-align: center;
 	width: 100%;
+}
+
+#navLabel{
+	font-size: 1.2em;
+	font-weight: 500;
+	letter-spacing: 4px;
+	margin-bottom: 10px;
+	margin-top: 150px;
+}
+
+.navNameContainer{
+	display: inline-block;
+	width: 80%;
+}
+
+#navFixedBackground{
+	position: fixed;
+	background-color: #db2940;
+	width: 25%;
+	height: 100vh;
+	z-index: -2;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4); 
 }
 
 #contentContainer{
@@ -37,13 +71,15 @@ nav{
 	height: 0%;
 	transition-duration: 700ms;
 	overflow: hidden;
-	background-color: #df3f53;
+	background-color: #ec3448;
+	z-index: -5;
 }
 
 h2{
 	letter-spacing: 4px;
 	font-weight: 500;
 	font-size: 1.4em;
+	text-transform: uppercase;
 }
 
 ul{
@@ -57,6 +93,10 @@ li{
 a{
 	color: inherit;
 	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 h1{
@@ -100,24 +140,13 @@ h1{
 
 #logo{
 	max-width: 180px;
+	cursor: pointer;
 }
 
-#navLabel{
-	font-size: 1.2em;
-	font-weight: 500;
-	letter-spacing: 4px;
-	margin-bottom: 10px;
-	margin-top: 150px;
+#logo:hover{
+	opacity: 0.7
 }
 
-#navFixedBackground{
-	position: fixed;
-	background-color: #db2940;
-	width: 25%;
-	height: 100vh;
-	z-index: -100;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); 
-}
 
 .navHoverBlock{
 	opacity: 0.9;
@@ -132,7 +161,7 @@ h1{
 	transition-duration: 400ms;
 }
 
-#backToTop{
+.button{
 	color: white;
 	text-align: center;
 	width: 200px;
@@ -159,8 +188,30 @@ h1{
 	z-index: -1;
 }
 
+#closeButtonContainer{
+	margin-bottom: 50px;
+	/*display: inline-block;*/
+	text-align: center;
+	clear: both;
+	border-radius: 100%;
+	transition-duration: 300ms;
+}
+
+#closeButton{
+	cursor: pointer;
+	max-width: 25px;
+	height: auto;
+	transition-duration: 300ms;
+}
+
+#closeButton:hover{
+	max-width: 28px;
+	opacity: 0.5;
+	margin-bottom: -15px;
+}
+
 #details{
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -169,10 +220,13 @@ h1{
 	font-size: 3.2em;
 	letter-spacing: 7px;
 	margin-right: -7px;
-	margin-top: 30px;
+	margin-left: 20px;
 	margin-bottom: 10px;
+	margin-top: 10px;
 	clear: both;
-	font-weight: 400;
+	display: inline-block;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 #placeAbout{
@@ -191,34 +245,46 @@ h1{
 	border-radius: 100%;
 	background-color: white;
 	margin: 0 auto;
-	clear: both;
-}
-
-#closeButtonContainer{
-	margin-bottom: 50px;
-	cursor: pointer;
-	clear: both;
-}
-
-#closeButton{
-	max-width: 30px;
+	overflow: hidden;
 }
 
 #placeAddress{
+	width: 33%;
+	margin-top: 20px;
 	display: inline-block;
-	padding: 40px;
+	/*padding: 40px;*/
 	letter-spacing: 3px;
 	font-size: 1.5em;
 }
 
 #placePhone{
+	width: 33%;
+	margin-top: 20px;
 	display: inline-block;
-	padding: 40px;
+	/*padding: 40px;*/
 	letter-spacing: 3px;
 	font-size: 1.5em;
 }
 
-#studentNames{
+#placeRating{
+	width: 33%;
+	margin-top: 20px;
+	font-size: 1.4em;
+	display: inline-block;
+	letter-spacing: 3px;
+}
+
+#placeWebsite{
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 50px;
+}
+
+#placePrice{
+	font-size: 1.4em;
+	display: inline-block;
+	letter-spacing: 3px;	
 }
 
 #studentChoices{
@@ -227,7 +293,12 @@ h1{
 }
 
 #studentImage{
-	max-width: 100px;
+	width: 140px;
+	height: 140px;
+	padding: 10px;
+	background-color: white;
+	overflow: hidden;
+	border-radius: 100%;
 }
 
 #studentName{
@@ -240,4 +311,20 @@ h1{
 	width:100%;
 	height:100%;
 	background-color:#333;
+}
+
+
+
+.detailLabel{
+	letter-spacing: 3px;
+	font-size: 1.1em;
+}
+
+#goBackButton{
+	margin-top: 80px;
+	transition-duration: 400;
+}
+
+.largeName{
+	font-size: 2.5em !important;
 }
