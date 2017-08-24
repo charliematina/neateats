@@ -1,0 +1,376 @@
+[
+	{ 	
+		"name" : "Amy",
+		"gender" : "female",
+		"choice1" : {
+			"id": false,
+			"name": "Oriental Kingdom",
+			"lat" : -41.2925079,			
+			"long" : 174.773563
+		},
+		"choice2" : {
+			"id": 654826151280351,
+			"name": "Five Boroughs",
+			"lat" : -41.294220413572,
+			"long" : 174.78515391541
+		},
+		"choice3" : {
+			"id": 110476935651011,
+			"name": "Memphis Belle Coffee House",
+			"lat" : -41.291843060825,
+			"long" : 174.77736065262
+		}
+	},
+	{ 	
+		"name" : "Camille",
+		"gender" : "female",
+		"choice1" : {
+			"id": 196714513687573,
+			"name": "Sweet Mothers Kitchen",
+			"lat" : -41.29426,
+			"long" : 174.78322
+		},
+		"choice2" : {
+			"id": 417011825045675,
+			"name": "Dragons",
+			"lat" : -41.29303,
+			"long" : 174.78159
+		},
+		"choice3" : {
+			"id": 171328776240092,
+			"name": "Ortega",
+			"lat" : -41.29441,
+			"long" : 174.78492
+		}
+	},
+	{ 	
+		"name" : "Charlie",
+		"gender" : "male",
+		"choice1" : {
+			"id": 204539896246295,
+			"name": "Customs Cafe",
+			"lat" : -41.29361,
+			"long" : 174.77619
+		},
+		"choice2" : {
+			"id": 346150492082991,
+			"name": "Six Barrel Cafe",
+			"lat" : -41.291923136739,
+			"long" : 174.77753552636
+		},
+		"choice3" : {
+			"id": 1874701716090075,
+			"name": "Husk",
+			"lat" : -41.29296,
+			"long" : 174.77514
+		}
+	},
+	{ 	
+		"name" : "Chris",
+		"gender" : "male",
+		"choice1" : {
+			"id": 652980331442452,
+			"name": "Grill Meats Beer",
+			"lat" : -41.29547,
+			"long" : 174.77465
+		},
+		"choice2" : {
+			"id": 265593596806111,
+			"name": "Portlander",
+			"lat" : -41.281144864981,
+			"long" : 174.77829610462
+		},
+		"choice3" : {
+			"id": 196714513687573,
+			"name": "Sweet Mothers Kitchen",
+			"lat" : -41.29426,
+			"long" : 174.78322
+		}
+	},
+	{ 	
+		"name" : "Connie",
+		"gender" : "female",
+		"choice1" : {
+			"id": 1534885586750730,
+			"name": "Puro Chile",
+			"lat" : -41.286792086875,
+			"long" : 174.77620026562
+		},
+		"choice2" : {
+			"id": 1430198223923076,
+			"name": "Cicio Cacio",
+			"lat" : -41.31315,
+			"long" : 174.77985
+		},
+		"choice3" : {
+			"id": 1506422266280275,
+			"name": "Enigma",
+			"lat" : -41.2924995,
+			"long" : 174.7793274
+		}
+	},
+	{ 	
+		"name" : "Elliot",
+		"gender" : "male",
+		"choice1" : {
+			"id": 132096953529993,
+			"name": "Monsoon Poon",
+			"lat" : -41.29298,
+			"long" : 174.78321
+		},
+		"choice2" : {
+			"id": 152216171059,
+			"name": "Beach Babylon",
+			"lat" : -41.2915,
+			"long" : 174.7940999
+		},
+		"choice3" : {
+			"id": 315687701806113,
+			"name": "Lone Star",
+			"lat" : -41.29443,
+			"long" : 174.78047
+		}
+	},	
+	{ 	
+		"name" : "Kenneth",
+		"gender" : "male",
+		"choice1" : {
+			"id": 279524429018,
+			"name": "Olive Cafe",
+			"lat" : -41.29439,
+			"long" : 174.77495
+		},
+		"choice2" : {
+			"id": 1430198223923076,
+			"name": "Prefab",
+			"lat" : -41.29548,
+			"long" : 174.77858
+		},
+		"choice3" : {
+			"id": 64325561605,
+			"name": "Joes Garage",
+			"lat" : -41.2924761,
+			"long" : 174.7796278
+		}
+	},
+	{ 	
+		"name" : "Kunal",
+		"gender" : "male",
+		"choice1" : {
+			"id": 108841139193838,
+			"name": "Nandos",
+			"lat" : -41.292670402064,
+			"long" : 174.77911502114
+		},
+		"choice2" : {
+			"id": 847655175247084,
+			"name": "Big Thumb",
+			"lat" : -41.2929604,
+			"long" : 174.7826226
+		},
+		"choice3" : {
+			"id": 331499616953493,
+			"name": "Crab Shack",
+			"lat" : -41.284836846545,
+			"long" : 174.77905993652
+		}
+	},
+	{ 	
+		"name" : "Massey",
+		"gender" : "male",
+		"choice1" : {
+			"id": false,
+			"name": "Valentines",
+			"lat" : -41.2242033,
+			"long" : 174.8721944
+		},
+		"choice2" : {
+			"id": false,
+			"name": "Dynasty",
+			"lat" : -41.1341429,
+			"long" : 174.837116
+		},
+		"choice3" : {
+			"id": 491148244426192,
+			"name": "Burger King",
+			"lat" : -41.290974,
+			"long" : 174.77686
+		}
+	},	
+	{ 	
+		"name" : "Kirsty",
+		"gender" : "female",
+		"choice1" : {
+			"id": 279524429018,
+			"name": "Olive Cafe",
+			"lat" : -41.29439,
+			"long" : 174.77495
+		},
+		"choice2" : {
+			"id": 196714513687573,
+			"name": "Sweet Mothers Kitchen",
+			"lat" : -41.29426,
+			"long" : 174.78322
+		},
+		"choice3" : {
+			"id": 480164815456317,
+			"name": "Mexico",
+			"lat" : -41.29201,
+			"long" : 174.7769999
+		}
+	},	
+	{ 	
+		"name" : "Mathew",
+		"gender" : "male",
+		"choice1" : {
+			"id": 224383614973,
+			"name": "Subway",
+			"lat" : -41.292468,
+			"long" : 174.779617
+		},
+		"choice2" : {
+			"id": false,
+			"name": "Indian Taj",
+			"lat" : -41.1564906,
+			"long" : 175.0110713
+		},
+		"choice3" : {
+			"id": false,
+			"name": "Forage",
+			"lat" : -41.2936818,
+			"long" : 174.7674248
+		}
+	},	
+	{ 	
+		"name" : "Michelle",
+		"gender" : "female",
+		"choice1" : {
+			"id": 658735000842890,
+			"name": "Kilim",
+			"lat" : -41.22398,
+			"long" : 174.87461
+		},
+		"choice2" : {
+			"id": 152216171059,
+			"name": "Buddha Stix",
+			"lat" : -41.22726,
+			"long" : 174.8841799
+		},
+		"choice3" : {
+			"id": 251418521586076,
+			"name": "Aroy",
+			"lat" : -41.29237,
+			"long" : 174.77642
+		}
+	},
+	{ 	
+		"name" : "Omri",
+		"gender" : "male",
+		"choice1" : {
+			"id": 279524429018,
+			"name": "Olive Cafe",
+			"lat" : -41.29439,
+			"long" : 174.77495
+		},
+		"choice2" : {
+			"id": 513322358694743,
+			"name": "Abrakebabra",
+			"lat" : -41.29101,
+			"long" : 174.77638
+		},
+		"choice3" : {
+			"id": 290856411310004,
+			"name": "Little India",
+			"lat" : -41.29313,
+			"long" : 174.7831
+		}
+	},
+	{ 	
+		"name" : "Rosalind",
+		"gender" : "female",
+		"choice1" : {
+			"id": 407702692702904,
+			"name": "Lorettas",
+			"lat" : -41.29434,
+			"long" : 174.7752999
+		},
+		"choice2" : {
+			"id": 654826151280351,
+			"name": "Five Boroughs",
+			"lat" : -41.294220413572,
+			"long" : 174.78515391541
+		},
+		"choice3" : {
+			"id": 196714513687573,
+			"name": "Sweet Mothers Kitchen",
+			"lat" : -41.29426,
+			"long" : 174.78322
+		}
+	},
+	{ 	
+		"name" : "Tim",
+		"gender" : "male",
+		"choice1" : {
+			"id": 715006338556985,
+			"name": "Mekong Cafe",
+			"lat" : -41.2949399,
+			"long" : 174.77577
+		},
+		"choice2" : {
+			"id": 151124838097,
+			"name": "The Oaks",
+			"lat" : -41.29155,
+			"long" : 174.7769
+		},
+		"choice3" : {
+			"id": 480164815456317,
+			"name": "Mexico",
+			"lat" : -41.29201,
+			"long" : 174.7769999
+		}
+	},
+	{ 	
+		"name" : "Tuturangi",
+		"gender" : "male",
+		"choice1" : {
+			"id": 159765530801243,
+			"name": "El Matador",
+			"lat" : -41.29495,
+			"long" : 174.77464
+		},
+		"choice2" : {
+			"id": 201864206519644,
+			"name": "Ekim Burger",
+			"lat" : -41.296235531441,
+			"long" : 174.77419123097
+		},
+		"choice3" : {
+			"id": 420457671652386,
+			"name": "Counter Culture",
+			"lat" : -41.294881523152,
+			"long" : 174.77239608765
+		}
+	},
+	{ 	
+		"name" : "Winson",
+		"gender" : "male",
+		"choice1" : {
+			"id": 279384712272681,
+			"name": "Burger Liquor",
+			"lat" : -41.28991,
+			"long" : 174.77448
+		},
+		"choice2" : {
+			"id": 658735000842890,
+			"name": "Kilim",
+			"lat" : -41.22398,
+			"long" : 174.87461
+		},
+		"choice3" : {
+			"id": false,
+			"name": "Japanese Thai",
+			"lat" : -41.1374278,
+			"long" : 174.8386587
+		}
+	}
+]

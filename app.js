@@ -1,6 +1,6 @@
 var express = require("express");
 var cors = require("cors");
-// var config = require("./config");
+var config = require("./config");
 var path = require("path");
 var students = require("./studentData");
 

@@ -1,6 +1,5 @@
 // Global Variables
 var map;
-var fbToken = "EAACEdEose0cBAM84dXLpuH73mQ1YvLVhw2VMoYYzt23XNNvfoA20z3MR74Ec4QMCdhGxN0LidpclqplzHkdOVQfVOSahX5xNbgZAZBsZCej32TRJ4oemUqXyFKOvymnaMFPhZC6tr7YCJTmYsKXAPz7PQoOAfq0akUxifvGaphEi4bAeEwpZBO1hfE5yaiL7y9Gc4KauqNQ6WtKZCOUC0H";
 var pageId;
 var placeName;
 var placeAbout;
@@ -22,6 +21,7 @@ var choice1;
 var choice2;
 var choice3;
 var gender;
+var fbToken;
 // Calling Functions
 initialiseMap();
 getStudentData();
@@ -103,6 +103,9 @@ $(document).on('mouseover', '.studentChoice', function(){
         }
 }).on('click', '.studentChoice', function(){
     placeId = $(this).attr('data-type');
+    if(placeId == false){
+        console.log("NO");
+    }
     getFbData(placeId);
     $(".studentChoice").removeClass('clicked').css("color","white").find(".navHoverBlock").css("width","0%");
     $(this).addClass('clicked').css("color","#db2940").find(".navHoverBlock").css("width","100%");
