@@ -10,6 +10,7 @@ var app = express();
 app.get("/students", function (request, response){
 	response.json(students);
 });
+
 app.use(cors());
 app.use(express.static("./public"));
 

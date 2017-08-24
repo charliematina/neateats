@@ -1,4 +1,5 @@
 // Global Variables
+<<<<<<< HEAD
 var map;
 var fbToken = "EAACEdEose0cBAIQyUuYsBgByFCZAEN0NZAUnE7ZAN1Qc8Nc75E3VdifqQIJZCAj3O2ogJw7e5vZB9IzvZC15Nzd2fNg168RXNOJ5wpAQJKEr27d652zjIBJXzF8W7kaeaofHl4omflPRUFPfwCOvU0JgRE0NuRe69K6DzzeLAeuRF5NhZA1QvTsEZBZCZAu1zlgKdcMnoacQVxlgZDZD";
 var pageId;
@@ -26,6 +27,9 @@ var gender;
 // Calling Functions
 initialiseMap();
 getStudentData();
+=======
+var map, popupbox;
+>>>>>>> a983f418e57cda9f4b5c64b7308c7ebe52f159b8
 
 function getStudentData(){
 	$.ajax({
@@ -45,10 +49,13 @@ function getStudentData(){
        		choice3 = data[i].choice3.name;
        		$("#nameList").append("<li class='listName navName'><div class='navHoverBlock'></div><span class='navNameContainer'>"+studentName+"<span></li>");
        	}
+
+       	initialiseMap();
        },
        error: function(){
             console.log("Error");
        }
+<<<<<<< HEAD
 	});
 }
 
@@ -96,6 +103,12 @@ $(document).on('mouseover', '.navName', function(){
 
 $(document).on('mouseover', '.studentChoice', function(){
 	if($(this).hasClass("clicked")){
+=======
+});
+
+$(".listName").hover(function(){
+		if($(this).hasClass("clicked")){
+>>>>>>> a983f418e57cda9f4b5c64b7308c7ebe52f159b8
 		} else{
 			$(this).find(".navHoverBlock").css("width","15px");
 		}
@@ -385,9 +398,53 @@ function initialiseMap(){
 
 	// Creating a new instance of map, locating the users position, run the map anf then show all the attractions.
 	map = new google.maps.Map(document.getElementById("map"), defaultOptions);
+
+	// Calling Map functions
+	injectMarkers();
 	
 	// This event listener calls addMarker() once the map is clicked.
     // google.maps.event.addListener(map, 'click', function(event) {
     //   addMarker(event.latLng, map);
     // });
+}
+
+// Showing all markers using ajax and external json files
+function injectMarkers(){
+	$.ajax({
+		url: "test.json",
+		dataType: "json",
+		success: function(Data){
+			for (var i = 0; i < Data.length; i++) {
+				var marker = new google.maps.Marker({
+					position: {
+						lat: Data[i].lat,
+						lng: Data[i].lng
+					},
+					map: map,
+					animation:google.maps.Animation.DROP,
+					title:Data[i].name,
+					description:Data[i].name,
+				});
+
+				// Adding event listener to function, allowing the user to toggle the infobox in the Google Map
+				setMarkerInfo(marker);
+			}
+		},	
+		error: function(){
+			console.log("Error, server not responding");
+		}
+	});
+}
+
+// Setting information about marker
+function setMarkerInfo(marker){
+	if(popupbox){
+		popupbox.close();
+	}
+
+	google.maps.event.addListener(marker, "click", function(){
+		console.log(marker);
+	});
+
+	return;
 }
