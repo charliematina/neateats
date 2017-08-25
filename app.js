@@ -1,6 +1,5 @@
 var express = require("express");
 var cors = require("cors");
-var config = require("./config");
 var path = require("path");
 var students = require("./studentData");
 
@@ -18,6 +17,7 @@ app.use(express.static("./public"));
 app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 app.use("/img", express.static(path.join(__dirname, "public/img")));
 app.use("/cursor", express.static(path.join(__dirname, "/img")));
+app.use("/exampleConfig.json", express.static(path.join(__dirname, "/exampleConfig.json")));
 
 app.use(function(request, response, next){
 	console.log(`${request.method} request for ${request.url}`); 

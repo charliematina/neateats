@@ -22,6 +22,15 @@ var choice2;
 var choice3;
 var gender;
 var fbToken;
+
+$.ajax({
+    url: "/exampleConfig.json",
+    dataType: "json",
+    success: function(data){
+        fbToken = data.fbToken;
+    }
+});
+
 // Calling Functions
 initialiseMap();
 getStudentData();
@@ -78,7 +87,6 @@ $(document).on('mouseover', '.navName', function(){
         }
     };
     $(".navName").removeClass('clicked').css("color","white").find(".navHoverBlock").css("width","0%");
-    // $(this).addClass('clicked').css("color","#db2940").find(".navHoverBlock").css("width","100%");
     $("#goBackButton").fadeIn(400);
     $("#studentChoices").fadeIn(400);
     $("#studentNames").hide();
@@ -103,9 +111,15 @@ $(document).on('mouseover', '.studentChoice', function(){
         }
 }).on('click', '.studentChoice', function(){
     placeId = $(this).attr('data-type');
-    if(placeId == false){
-        console.log("NO");
-    }
+    if(placeId === "invalid"){
+        $("#details").empty().append(
+               "<div id='placeName'>Error 404!</div>"+
+                "<div id='placeAbout'>Sorry, there seems to be no info for the business.</div>"
+           );
+   } else{
+       getFbData(placeId);
+   }
+
     getFbData(placeId);
     $(".studentChoice").removeClass('clicked').css("color","white").find(".navHoverBlock").css("width","0%");
     $(this).addClass('clicked').css("color","#db2940").find(".navHoverBlock").css("width","100%");
@@ -151,7 +165,6 @@ function getFbData(locationId){
        contentType: "application/json",
        dataType: "jsonp",
        success: function(fbData){
-        console.log(fbData);
             placeName = fbData.name;
             placeCity = fbData.location.city;
             placeStreet = fbData.location.street;
@@ -165,17 +178,30 @@ function getFbData(locationId){
             placeWebsite = fbData.website;
             placePrice = fbData.price_range;
             $("#details").empty().append(
-                // "<div id='closeButtonContainer'><img id='closeButton' src='img/cross.png'></div>"+
                 "<div id='placeImage'><img src='"+placeImage+"'></div>"+
                 "<div id='placeName'>"+placeName+"</div>"+
-                "<div id='placeAbout'>"+placeAbout+"</div>"+
+                "<div id='placeAbout'></div>"+
                 "<div id='placeAddress'>"+placeStreet+"<br>"+placeCity+"</div>"+
-                "<div id='placePhone'>PHONE<br>"+placePhone+"</div>"+
+                "<div id='placePhone'>PHONE<br></div>"+
                 "<div id='placeRating'><div class='detailLabel'>RATING</div>"+placeRating+"</div>"+
-                "<div id='placeWebsite'><a target='_blank' href='"+placeWebsite+"'>"+placeWebsite+"</a></div>"
+                "<div id='placeWebsite'><a target='_blank' id='placeWebsiteLink' href='"+placeWebsite+"'></a></div>"
             );
+            if(typeof placeAbout === "undefined"){
+                $("#placeAbout").empty();
+            } else{
+                $("#placeAbout").append(placeAbout);
+            }
+            if(typeof placePhone === "undefined"){
+                $("#placePhone").empty();
+            } else{
+                $("#placePhone").append(placePhone);
+            }
+            if(typeof placeWebsite === "undefined"){
+                $("#placeWebsiteLink").empty();
+            } else{
+                $("#placeWebsiteLink").append(placeWebsite);
+            }
             if(placeName.length > 15 ){
-                // $("#placeName").css('font-size','2em');
                 $("#placeName").addClass('largeName');
             };
        },
@@ -377,10 +403,6 @@ function initialiseMap(){
     
     injectMarkers();
     
-    // This event listener calls addMarker() once the map is clicked.
-    // google.maps.event.addListener(map, 'click', function(event) {
-    //   addMarker(event.latLng, map);
-    // });
 }
 // Showing all markers using ajax and external json files
 // function addMarkers(choiceLat, choiceLong){
@@ -430,23 +452,18 @@ function injectMarkers(){
                 // Adding event listener to function, allowing the user to toggle the infobox in the Google Map
                 setMarkerInfo(marker);
             }
-            console.log(everyonesMarkers);
         },  
         error: function(){
             console.log("Error, server not responding");
         }
     });
 }
-// }
-// addMarkers(choice1, choice1);
-// addMarkers(choice1, choice1);
-// Setting information about marker
+
 function setMarkerInfo(marker){
     if(popupbox){
         popupbox.close();
     }
 
-    console.log(marker);
     google.maps.event.addListener(marker, "click", function(){
 	    placeId = everyonesMarkers[marker.i].id;
     	getFbData(placeId);

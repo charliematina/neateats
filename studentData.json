@@ -3,7 +3,7 @@
 		"name" : "Amy",
 		"gender" : "female",
 		"choice1" : {
-			"id": false,
+			"id": "invalid",
 			"name": "Oriental Kingdom",
 			"lat" : -41.2925079,			
 			"long" : 174.773563
@@ -179,13 +179,13 @@
 		"name" : "Massey",
 		"gender" : "male",
 		"choice1" : {
-			"id": false,
+			"id": "invalid",
 			"name": "Valentines",
 			"lat" : -41.2242033,
 			"long" : 174.8721944
 		},
 		"choice2" : {
-			"id": false,
+			"id": "invalid",
 			"name": "Dynasty",
 			"lat" : -41.1341429,
 			"long" : 174.837116
@@ -229,13 +229,13 @@
 			"long" : 174.779617
 		},
 		"choice2" : {
-			"id": false,
+			"id": "invalid",
 			"name": "Indian Taj",
 			"lat" : -41.1564906,
 			"long" : 175.0110713
 		},
 		"choice3" : {
-			"id": false,
+			"id": "invalid",
 			"name": "Forage",
 			"lat" : -41.2936818,
 			"long" : 174.7674248
@@ -330,7 +330,7 @@
 		}
 	},
 	{ 	
-		"name" : "Tuturangi",
+		"name" : "Tuterangi",
 		"gender" : "male",
 		"choice1" : {
 			"id": 159765530801243,
@@ -367,7 +367,7 @@
 			"long" : 174.87461
 		},
 		"choice3" : {
-			"id": false,
+			"id": "invalid",
 			"name": "Japanese Thai",
 			"lat" : -41.1374278,
 			"long" : 174.8386587
